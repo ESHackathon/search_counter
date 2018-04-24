@@ -10,8 +10,7 @@ def search_count(query):
     # encoded_query = urllib.parse.quote_plus(query)
     url = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&retmode=json&retmax=0&term=%s" % query
     response = requests.get(url)
-    print response.content
-    return json.loads(response.content)['esearchresult']['count']
+    return int(json.loads(response.content)['esearchresult']['count'])
 
 def main():
     term = "Forest*"
