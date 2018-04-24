@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 @app.route("/search-count", methods=['GET'])
 def search_count():
-    return json.dumps(get_search_count("cancer"))
+    return json.dumps(get_search_count("colon AND cancer"))
 
 
 app.run()
