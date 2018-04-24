@@ -5,4 +5,4 @@ from crossref.restful import Types
 
 
 def search_count(query):
-	return Types().works('journal-article').query(query.encode('utf-8')).count()
+    return Types().works('journal-article').query(query.encode('utf-8')).count()
